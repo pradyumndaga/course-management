@@ -1,0 +1,10 @@
+<div class="main-layout">
+
+    <div class="controls">
+        <input type="text" placeholder="Search Name" [(ngModel)]="searchText" (ngModelChange)="applyFilter($event)">
+        <button (click)="openAddCourseModal()">Add Course</button>
+    </div>
+  <div class="content-area">
+    <app-course-table [courses]="dataSource" (deleteCourse)="deleteRow($event)"></app-course-table>
+    </div>
+    </div>

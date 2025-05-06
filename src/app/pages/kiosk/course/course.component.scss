@@ -1,0 +1,29 @@
+.course-item {
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+  border-radius: 6px;
+  padding: 0.5rem;
+
+  &-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.25rem;
+
+    border-bottom: 1px solid;
+    &-img {
+      width: 2rem;
+      height: 2rem;
+      background-color: black;
+    }
+
+    &-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin: 0.5rem 0;
+    }
+  }
+}

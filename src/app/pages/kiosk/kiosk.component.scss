@@ -1,0 +1,45 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.section-selector{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0.5rem 0;
+
+    button {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        font-size: 1rem;
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+}
+
+.course-list {
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.active {
+    background-color: red;
+    color: white;
+}

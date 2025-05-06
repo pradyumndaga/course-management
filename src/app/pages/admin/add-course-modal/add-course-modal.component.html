@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Add New Course</h2>
+<div mat-dialog-content>
+  <form [formGroup]="courseDetail" (ngSubmit)="onSubmit()">
+    <fieldset>
+      <label>Name</label>
+      <input matInput name="name" formControlName="name" required />
+    </fieldset>
+    <fieldset>
+      <label>Instructor</label>
+      <input matInput name="instructor" formControlName="instructor" required />
+</fieldset>
+<fieldset>
+      <label>Time</label>
+      <input matInput name="time" formControlName="time" required />
+      </fieldset>
+  <button type="submit" [disabled]="!courseDetail.valid" (click)="onSubmit()">Submit</button>
+
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+</div>

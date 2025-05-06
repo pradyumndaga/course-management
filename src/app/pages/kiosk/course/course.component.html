@@ -1,0 +1,6 @@
+<div class="course-item"> 
+    <div class="course-item-head"> <img class="course-item-head-img" [src]="course.imgUrl" [alt]="course.name"> <span class="course-item-head-label">{{ course.name }}</span></div>
+    <p>Instructor: {{ course.instructor }}</p>
+    <p>Time: {{ course.time }}</p>
+    <button (click)="enroll(!course.enrolled)">{{course.enrolled ? "Cancel" : "Enroll"}}</button>
+</div>
