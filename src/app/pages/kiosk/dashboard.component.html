@@ -1,0 +1,16 @@
+<div>
+    <section class="section-selector">
+        <button [ngStyle]="{ backgroundColor: showEnrolledCourses ? 'blue' : '' }"  (click)="showCourses(true)"> Enrolled Coures</button>
+        <button [ngStyle]="{ backgroundColor: !showEnrolledCourses ? 'blue' : '' }" (click)="showCourses(false)">Explore Courses</button>
+    </section>
+    <section class="course-list">
+        <ng-container *ngIf="(showEnrolledCourses ? enrolledCourses : availableCourses).length > 0; else emptyMessage">
+            <ng-container *ngFor="let course of (showEnrolledCourses ? enrolledCourses : availableCourses)">
+                <app-course [course]="course" (courseAction)="action($event)"></app-course>
+            </ng-container>
+        </ng-container>
+        <ng-template #emptyMessage>
+            <p class="empty-message">No courses available to display.</p>
+        </ng-template>
+    </section>
+</div>

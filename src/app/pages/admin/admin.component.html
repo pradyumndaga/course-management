@@ -1,10 +1,17 @@
 <div class="main-layout">
 
     <div class="controls">
-        <input type="text" placeholder="Search Name" [(ngModel)]="searchText" (ngModelChange)="applyFilter($event)">
+        <ng-container *ngIf="dataSource.length >0; else emptyMessage">
+            <input  type="text" placeholder="Search Name" [(ngModel)]="searchText" (ngModelChange)="applyFilter($event)">
+        </ng-container>
         <button (click)="openAddCourseModal()">Add Course</button>
     </div>
   <div class="content-area">
-    <app-course-table [courses]="dataSource" (deleteCourse)="deleteRow($event)"></app-course-table>
+    <ng-container *ngIf="dataSource.length > 0">
+        <app-course-table [courses]="dataSource" (deleteCourse)="deleteRow($event)"></app-course-table>
+    </ng-container>
+    <ng-template #emptyMessage>
+        <p class="empty-message">No courses available to display.</p>
+    </ng-template>
     </div>
     </div>

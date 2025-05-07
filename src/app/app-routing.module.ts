@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'kiosk', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'admin', loadComponent: () => import('./pages/admin/admin.component').then(m => m.AdminComponent) },
-  { path: 'kiosk', loadComponent: () => import('./pages/kiosk/kiosk.component').then(m => m.KioskComponent) },
+  { path: 'dashboard', loadComponent: () => import('./pages/kiosk/dashboard.component').then(m => m.DashboardComponent) },
+  { path: '**', redirectTo: 'dashboard' }
 ]
 
 @NgModule({

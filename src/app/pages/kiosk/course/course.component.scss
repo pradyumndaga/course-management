@@ -26,4 +26,16 @@
       margin: 0.5rem 0;
     }
   }
+
+  button {
+    background-color: #007bff;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 6px;
+    border: 1px solid;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
 }

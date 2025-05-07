@@ -2,7 +2,12 @@
     position: fixed;
     width: 100%;
 }
-
+h3 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #007bff;
+}
 .header-container {
     background-color: aqua;
     display: flex;
@@ -23,4 +28,21 @@
     a {
         cursor: pointer;
     }
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+
+    &:hover {
+        color: blue;
+    }
+}
+
+.active-link {
+    font-weight: bold;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
 }
