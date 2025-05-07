@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CourseTableComponent } from './course-table/course-table.component';
-import { CourseComponent } from "../kiosk/course/course.component";
+import { CourseComponent } from "../dashboard/course/course.component";
 import { CourseService } from 'src/app/services/course.service';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { AddCourseModalComponent } from './add-course-modal/add-course-modal.component';
