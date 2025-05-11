@@ -1,7 +1,7 @@
 <div>
     <section class="section-selector">
-        <button [ngStyle]="{ backgroundColor: showEnrolledCourses ? 'blue' : '' }"  (click)="showCourses(true)"> Enrolled Coures</button>
-        <button [ngStyle]="{ backgroundColor: !showEnrolledCourses ? 'blue' : '' }" (click)="showCourses(false)">Explore Courses</button>
+        <label> {{ showEnrolledCourses ? "Enrolled Courses" : "Explore Courses" }}</label>
+       <button [ngStyle]="{ backgroundColor: !showEnrolledCourses ? 'blue' : '' }" (click)="showCourses(!showEnrolledCourses)">{{ showEnrolledCourses ? 'Explore' : 'Enrolled'}} Courses</button>
     </section>
     <section class="course-list">
         <ng-container *ngIf="(showEnrolledCourses ? enrolledCourses : availableCourses).length > 0; else emptyMessage">

@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
 
 
 @Component({
   standalone: true,
   selector: 'app-course-table',
-  imports: [MatTableModule],
+  imports: [MatTableModule, MatIconModule],
   templateUrl: './course-table.component.html',
   styleUrls: ['./course-table.component.scss']
 })

@@ -1,3 +1,24 @@
+:host {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.table-container {
+    flex: 1;
+    height: calc(100vh - 10rem);
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+th, tr {
+    background-color: #4B5563 !important;
+    padding: 0.5rem;
+    text-align: left;
+    color: white;
+}
+
 .delete-btn {
     background-color: #ff4d4d;
     color: white;
