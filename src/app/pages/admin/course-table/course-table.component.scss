@@ -6,7 +6,7 @@
 
 .table-container {
     flex: 1;
-    height: calc(100vh - 10rem);
+    max-height: calc(100vh - 10rem);
     overflow-y: auto;
     border: 1px solid #ccc;
     border-radius: 8px;
